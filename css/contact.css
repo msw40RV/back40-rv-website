@@ -1,0 +1,401 @@
+/* ========================================
+   Contact Page Specific Styles
+   ======================================== */
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-text), var(--accent-brown));
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-sm);
+    margin-top: 60px;
+}
+
+.page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Contact Methods */
+.contact-methods {
+    background: var(--gray-light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.contact-card {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--accent-brown);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto var(--spacing-sm);
+}
+
+.contact-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-detail {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-detail a {
+    color: var(--accent-brown);
+}
+
+.contact-hours {
+    margin-top: var(--spacing-sm);
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+/* Booking Section */
+.booking-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.booking-info {
+    background: var(--gray-light);
+    padding: var(--spacing-md);
+    border-radius: 10px;
+}
+
+.booking-info h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.booking-info .lead {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-text);
+}
+
+.booking-info .lead a {
+    color: var(--accent-brown);
+    font-weight: 600;
+}
+
+.booking-highlights h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.booking-highlights ul {
+    margin-bottom: var(--spacing-md);
+}
+
+.booking-highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.booking-highlights i {
+    color: var(--green-success);
+    margin-top: 0.2rem;
+}
+
+.booking-rates {
+    background: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 5px;
+    margin-bottom: var(--spacing-md);
+    border-left: 4px solid var(--accent-brown);
+}
+
+.booking-rates h4 {
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-xs);
+}
+
+.booking-rates p {
+    margin-bottom: var(--spacing-xs);
+}
+
+.booking-note {
+    background: var(--accent-brown);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 5px;
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+}
+
+.booking-note i {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+/* Booking Form */
+.booking-form-container {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.booking-form h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--gray-medium);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-brown);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #dc3545;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.form-note {
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    margin-top: var(--spacing-sm);
+}
+
+/* Location Section */
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.location-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.location-details {
+    margin-bottom: var(--spacing-md);
+}
+
+.location-item {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--gray-medium);
+}
+
+.location-item i {
+    color: var(--accent-brown);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.location-item strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.location-note {
+    background: var(--gray-light);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 5px;
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.location-note i {
+    color: var(--blue-info);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.location-map {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.location-map iframe {
+    display: block;
+}
+
+/* FAQ Links Section */
+.faq-links {
+    background: var(--gray-light);
+    text-align: center;
+}
+
+.faq-links h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.faq-links > p {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    margin-bottom: var(--spacing-lg);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.faq-link-card {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: 10px;
+    transition: var(--transition);
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.faq-link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.faq-link-card i {
+    font-size: 2.5rem;
+    color: var(--accent-brown);
+    margin-bottom: var(--spacing-sm);
+}
+
+.faq-link-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-text);
+}
+
+.faq-link-card p {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .location-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .booking-content {
+        grid-template-columns: 1fr 1.2fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

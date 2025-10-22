@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Back40 RV Park. Book your site by phone (479-721-5630), text, or online form. Get directions to Pineville, Missouri near Bella Vista, Arkansas trails.">
+    <title>Contact & Book Now | Back40 RV Park | Bella Vista AR</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Header (same as homepage) -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1>back40<span>-rv</span></h1></a>
+                </div>
+                <nav class="nav" id="nav">
+                    <button class="nav-close" id="nav-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="rv-sites.html" class="nav-link">RV Sites & Rates</a></li>
+                        <li><a href="amenities.html" class="nav-link">Amenities</a></li>
+                        <li><a href="trails.html" class="nav-link">Trails</a></li>
+                        <li><a href="local-area.html" class="nav-link">Local Area</a></li>
+                        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="tel:4797215630" class="phone-btn">
+                        <i class="fas fa-phone"></i>
+                        <span>479-721-5630</span>
+                    </a>
+                    <a href="#book" class="cta-btn">Book Now</a>
+                    <button class="nav-toggle" id="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Back40 RV</h1>
+            <p>Book your site and start your Ozark adventure</p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p class="contact-detail"><a href="tel:4797215630">479-721-5630</a></p>
+                    <p>Best way to book - speak with us directly</p>
+                    <p class="contact-hours"><strong>Hours:</strong> By Appointment<br>7 Days a Week</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-sms"></i>
+                    </div>
+                    <h3>Text to Book</h3>
+                    <p class="contact-detail"><a href="sms:4797215630">479-721-5630</a></p>
+                    <p>Quick and convenient - text us your dates</p>
+                    <a href="sms:4797215630?&body=Hi! I'd like to book a site at Back40 RV. My preferred dates are:" class="btn btn-small btn-outline">Send Text</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Form</h3>
+                    <p class="contact-detail">Online Inquiry</p>
+                    <p>Fill out the form below for a response within 24 hours</p>
+                    <a href="#book" class="btn btn-small btn-outline">Go to Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section" id="book">
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-info">
+                    <h2>Reserve Your Site</h2>
+                    <p class="lead">Fill out the form below and we'll confirm your reservation within 24 hours. For immediate booking, please call <a href="tel:4797215630">479-721-5630</a>.</p>
+
+                    <div class="booking-highlights">
+                        <h3>What to Expect:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Confirmation within 24 hours</li>
+                            <li><i class="fas fa-check-circle"></i> Site assignment based on your RV size</li>
+                            <li><i class="fas fa-check-circle"></i> Arrival instructions and local info</li>
+                            <li><i class="fas fa-check-circle"></i> Trail maps and recommendations</li>
+                        </ul>
+
+                        <div class="booking-rates">
+                            <h4>Current Rates:</h4>
+                            <p><strong>Nightly:</strong> $50/night</p>
+                            <p><strong>Weekly:</strong> $300/week (Save $50!)</p>
+                        </div>
+
+                        <div class="booking-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>By Appointment:</strong> We coordinate arrivals personally to ensure the best experience for every guest.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-container">
+                    <form class="booking-form" id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <h3>Reservation Request</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="arrival">Arrival Date *</label>
+                                <input type="date" id="arrival" name="arrival" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nights">Number of Nights *</label>
+                                <input type="number" id="nights" name="nights" min="1" value="2" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rvLength">RV Length (feet) *</label>
+                                <input type="number" id="rvLength" name="rvLength" min="10" max="50" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ampService">Amp Service Needed *</label>
+                                <select id="ampService" name="ampService" required>
+                                    <option value="">Select...</option>
+                                    <option value="50">50 Amp</option>
+                                    <option value="30">30 Amp</option>
+                                    <option value="20">20 Amp</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests">Number of Guests</label>
+                                <input type="number" id="guests" name="guests" min="1" value="2">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pets">Pets?</label>
+                                <select id="pets" name="pets">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Special Requests or Questions</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Let us know if you have any special requests or questions about your stay..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>I understand this is a self-contained RV park (no bathhouse facilities) *</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-paper-plane"></i>
+                            Submit Reservation Request
+                        </button>
+
+                        <p class="form-note">* Required fields. You'll receive confirmation within 24 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Directions -->
+    <section class="location-section">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-text">
+                    <h2>Location & Directions</h2>
+                    <div class="location-details">
+                        <div class="location-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>1373 Hickory Lane<br>Pineville, MO 64856</p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <i class="fas fa-route"></i>
+                            <div>
+                                <strong>From Bella Vista, AR:</strong>
+                                <p>12 miles north (15 minutes)</p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <i class="fas fa-route"></i>
+                            <div>
+                                <strong>From Bentonville, AR:</strong>
+                                <p>22 miles (28 minutes via I-49 S / US-71 S)</p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <i class="fas fa-compass"></i>
+                            <div>
+                                <strong>GPS Coordinates:</strong>
+                                <p>36.5951, -94.3849</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/dir//1373+Hickory+Lane,+Pineville,+MO+64856" target="_blank" class="btn btn-primary" rel="noopener">
+                        <i class="fas fa-directions"></i>
+                        Get Directions on Google Maps
+                    </a>
+
+                    <div class="location-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Important:</strong> Please call ahead for arrival instructions. We operate by appointment to ensure personalized service.</p>
+                    </div>
+                </div>
+
+                <div class="location-map">
+                    <!-- Google Maps Embed -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.989!2d-94.3849!3d36.5951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDM1JzQyLjQiTiA5NMKwMjMnMDUuNiJX!5e0!3m2!1sen!2sus!4v1234567890"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Quick Links -->
+    <section class="faq-links">
+        <div class="container">
+            <h2>Questions Before Booking?</h2>
+            <p>Check out our FAQ page for answers to common questions</p>
+            <div class="faq-grid">
+                <a href="faq.html#reservations" class="faq-link-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Reservations</h4>
+                    <p>Booking process & policies</p>
+                </a>
+                <a href="faq.html#rv-requirements" class="faq-link-card">
+                    <i class="fas fa-rv"></i>
+                    <h4>RV Requirements</h4>
+                    <p>Site specs & amenities</p>
+                </a>
+                <a href="faq.html#trails" class="faq-link-card">
+                    <i class="fas fa-hiking"></i>
+                    <h4>Trail Access</h4>
+                    <p>What trails are accessible</p>
+                </a>
+                <a href="faq.html#policies" class="faq-link-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>Park Policies</h4>
+                    <p>Pets, quiet hours, rules</p>
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="faq.html" class="btn btn-secondary">View All FAQ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Back40 RV Park</h3>
+                    <p>Your quiet basecamp for Ozark trail adventures in Bella Vista, Arkansas and Pineville, Missouri.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> <a href="tel:4797215630">479-721-5630</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> 1373 Hickory Lane, Pineville, MO 64856</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="rv-sites.html">RV Sites & Rates</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="trails.html">Trails & Activities</a></li>
+                        <li><a href="local-area.html">Local Area Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact & Directions</a></li>
+                        <li><a href="contact.html#book">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Hours</h4>
+                    <p><strong>By Appointment</strong></p>
+                    <p>7 Days a Week</p>
+                    <p class="footer-cta-small">
+                        <a href="tel:4797215630" class="btn btn-small">Call to Reserve</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Back40 RV Park. All rights reserved.</p>
+                <p>Designed by Brett for Mark Swart</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

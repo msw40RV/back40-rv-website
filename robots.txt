@@ -1,0 +1,73 @@
+# Back40 RV Park - robots.txt
+# Updated: January 2025
+# AI Search Optimization (AEO) Enabled
+
+# Default Crawlers
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Sitemap Location
+Sitemap: https://back40-rv.com/sitemap.xml
+
+# AI Search Crawlers - ALLOW ALL
+# OpenAI (ChatGPT Search)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# Google (Gemini, Bard, AI Search)
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Bing (Copilot, ChatGPT integration)
+User-agent: Bingbot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+User-agent: Facebookbot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (AI training data)
+User-agent: CCBot
+Allow: /
+
+# Applebot (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Disallow Admin/Backend
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Allow CSS, JS, Images (important for AI understanding)
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Notes for AI Search:
+# - All AI crawlers explicitly allowed
+# - Focus pages: index.html, trails.html, amenities.html, faq.html
+# - Schema.org markup present on all pages
+# - FAQ optimized for voice/AI search (50-150 word answers)
+# - See llms.txt for AI-specific content guidelines
