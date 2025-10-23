@@ -55,25 +55,37 @@ function initBookingForm() {
             smsText += `\nMessage: ${message}`;
         }
 
-        // Encode SMS text for URL
-        const encodedMessage = encodeURIComponent(smsText);
+        // Detect if mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-        // Open SMS app with pre-filled message
-        const smsLink = `sms:4797215630&body=${encodedMessage}`;
-        window.location.href = smsLink;
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
 
-        // Reset form and show success message
-        setTimeout(() => {
-            showSuccessMessage();
+        if (isMobile) {
+            // Mobile: Open SMS app with pre-filled message
+            const encodedMessage = encodeURIComponent(smsText);
+            const smsLink = `sms:4797215630&body=${encodedMessage}`;
+            window.location.href = smsLink;
+
+            setTimeout(() => {
+                showSuccessMessage();
+                form.reset();
+
+                // Track conversion
+                if (typeof Back40 !== 'undefined') {
+                    Back40.trackEvent('Booking', 'Form Submit', 'Reservation Request - Mobile SMS');
+                }
+            }, 500);
+        } else {
+            // Desktop: Show modal with booking info
+            showDesktopBookingModal(smsText, name, phone);
             form.reset();
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
 
             // Track conversion
             if (typeof Back40 !== 'undefined') {
-                Back40.trackEvent('Booking', 'Form Submit', 'Reservation Request');
+                Back40.trackEvent('Booking', 'Form Submit', 'Reservation Request - Desktop');
             }
-        }, 500);
+        }
     });
 }
 
@@ -214,6 +226,95 @@ function showErrorMessage() {
 
     // Scroll to message
     message.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// Desktop Booking Modal
+function showDesktopBookingModal(bookingInfo, customerName, customerPhone) {
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        padding: 20px;
+    `;
+
+    // Create modal content
+    const modalContent = document.createElement('div');
+    modalContent.style.cssText = `
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    `;
+
+    modalContent.innerHTML = `
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+            <i class="fas fa-check-circle" style="color: #28a745; font-size: 3rem; margin-bottom: 1rem;"></i>
+            <h2 style="color: #333; margin-bottom: 0.5rem;">Booking Request Ready!</h2>
+            <p style="color: #666;">Please call or text Mark with your booking details below</p>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+            <h3 style="color: #333; margin-bottom: 1rem; font-size: 1.1rem;">Your Booking Information:</h3>
+            <pre style="white-space: pre-wrap; font-family: monospace; font-size: 0.9rem; color: #333; line-height: 1.6; margin: 0;">${bookingInfo}</pre>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <a href="tel:4797215630"
+               style="flex: 1; min-width: 200px; background: #28a745; color: white; padding: 1rem; text-align: center; text-decoration: none; border-radius: 5px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <i class="fas fa-phone"></i>
+                Call Mark: 479-721-5630
+            </a>
+            <a href="sms:4797215630"
+               style="flex: 1; min-width: 200px; background: #007bff; color: white; padding: 1rem; text-align: center; text-decoration: none; border-radius: 5px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <i class="fas fa-sms"></i>
+                Text Mark
+            </a>
+        </div>
+
+        <div style="background: #fff3cd; border: 1px solid #ffc107; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">
+            <p style="margin: 0; color: #856404; font-size: 0.9rem;">
+                <i class="fas fa-info-circle"></i>
+                <strong>Tip:</strong> You can copy the booking info above and paste it into your text message or tell Mark during the call.
+            </p>
+        </div>
+
+        <button onclick="this.closest('.booking-modal').remove()"
+                style="width: 100%; padding: 0.75rem; background: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">
+            Close
+        </button>
+    `;
+
+    modal.className = 'booking-modal';
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+
+    // Close modal on overlay click
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', function escapeHandler(e) {
+        if (e.key === 'Escape') {
+            modal.remove();
+            document.removeEventListener('keydown', escapeHandler);
+        }
+    });
 }
 
 // Set minimum date to today for arrival date picker
