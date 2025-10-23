@@ -193,23 +193,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load saved progress
     loadProgress();
 
-    // Expand/collapse task details
-    const labels = document.querySelectorAll('.checklist-item > label');
-    labels.forEach(label => {
-        label.addEventListener('click', function(e) {
-            // Don't expand if clicking checkbox - let checkbox handle it
-            if (e.target.type === 'checkbox') return;
+    // Expand/collapse task details - attach to the entire checklist item
+    const checklistItems = document.querySelectorAll('.checklist-item');
+    checklistItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // If clicking checkbox or label for checkbox, let it handle check/uncheck only
+            if (e.target.type === 'checkbox' || e.target.tagName === 'LABEL') {
+                return;
+            }
 
-            // Prevent label from toggling the checkbox when clicking task title
-            e.preventDefault();
-
-            const item = this.closest('.checklist-item');
+            // Otherwise, toggle the details
             const details = item.querySelector('.task-details');
             const checkbox = item.querySelector('input[type="checkbox"]');
 
-            // Don't show details for completed tasks
-            if (checkbox.checked) return;
-
+            // Show details regardless of completion status
             if (details) {
                 if (details.style.display === 'block') {
                     details.style.display = 'none';
