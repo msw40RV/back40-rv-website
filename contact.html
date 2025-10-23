@@ -13,6 +13,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Back40 RV Park",
+      "url": "https://back40-rv.com",
+      "telephone": "+1-479-721-5630",
+      "email": "back40rvpark@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1373 Hickory Lane",
+        "addressLocality": "Pineville",
+        "addressRegion": "MO",
+        "postalCode": "64856",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "36.5951",
+        "longitude": "-94.3849"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "By appointment"
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -128,7 +161,7 @@
                 </div>
 
                 <div class="booking-form-container">
-                    <form class="booking-form" id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form class="booking-form" id="bookingForm" action="mailto:back40rvpark@gmail.com" method="POST" enctype="text/plain">
                         <h3>Reservation Request</h3>
 
                         <div class="form-row">

@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Dashboard | Back40 RV Park</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>back40<span>-rv</span></h2>
+            <p>SEO Admin</p>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#overview" class="nav-item active" data-section="overview">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Overview</span>
+            </a>
+            <a href="#checklist" class="nav-item" data-section="checklist">
+                <i class="fas fa-tasks"></i>
+                <span>SEO Checklist</span>
+            </a>
+            <a href="#directories" class="nav-item" data-section="directories">
+                <i class="fas fa-building"></i>
+                <span>Directories</span>
+            </a>
+            <a href="#templates" class="nav-item" data-section="templates">
+                <i class="fas fa-file-alt"></i>
+                <span>Templates</span>
+            </a>
+            <a href="#guides" class="nav-item" data-section="guides">
+                <i class="fas fa-book"></i>
+                <span>Guides</span>
+            </a>
+            <a href="#settings" class="nav-item" data-section="settings">
+                <i class="fas fa-cog"></i>
+                <span>Site Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="../index.html" class="btn-link" target="_blank">
+                <i class="fas fa-external-link-alt"></i> View Site
+            </a>
+            <button class="btn-link" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1 id="pageTitle">SEO Dashboard Overview</h1>
+            <div class="header-actions">
+                <span class="user-info">
+                    <i class="fas fa-user-circle"></i> Mark
+                </span>
+            </div>
+        </header>
+
+        <!-- Overview Section -->
+        <section id="overview-section" class="content-section active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #4caf50;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="completedTasks">0</h3>
+                        <p>Tasks Completed</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #ff9800;">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="pendingTasks">18</h3>
+                        <p>Tasks Pending</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #2196f3;">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="progressPercent">0%</h3>
+                        <p>Progress</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #9c27b0;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Priority</h3>
+                        <p>Get Started!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <h3>Overall Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+                </div>
+                <p class="progress-text" id="progressText">Complete the checklist to boost your SEO rankings</p>
+            </div>
+
+            <div class="quick-actions">
+                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                <div class="action-grid">
+                    <a href="https://search.google.com/search-console" target="_blank" class="action-card">
+                        <i class="fab fa-google"></i>
+                        <span>Google Search Console</span>
+                    </a>
+                    <a href="https://www.bing.com/webmasters" target="_blank" class="action-card">
+                        <i class="fab fa-microsoft"></i>
+                        <span>Bing Webmaster Tools</span>
+                    </a>
+                    <a href="https://business.google.com" target="_blank" class="action-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Google Business Profile</span>
+                    </a>
+                    <a href="https://www.yelp.com/biz/create" target="_blank" class="action-card">
+                        <i class="fab fa-yelp"></i>
+                        <span>Yelp for Business</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <h4>Getting Started</h4>
+                    <p>Start with the <strong>SEO Checklist</strong> tab. Complete tasks from top to bottom for maximum impact. The most important tasks are at the top!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist Section -->
+        <section id="checklist-section" class="content-section">
+            <div class="checklist-header">
+                <h2>SEO Implementation Checklist</h2>
+                <p>Complete these tasks to optimize your website for search engines and get found by customers.</p>
+            </div>
+
+            <!-- Week 1 Tasks -->
+            <div class="checklist-group">
+                <div class="group-header">
+                    <h3><i class="fas fa-flag"></i> Week 1: Critical Foundation (Do First!)</h3>
+                    <span class="priority-badge high">High Priority</span>
+                </div>
+
+                <div class="checklist-item" data-task="gsc">
+                    <input type="checkbox" id="task-gsc">
+                    <label for="task-gsc">
+                        <span class="task-title">Submit site to Google Search Console</span>
+                        <span class="task-meta">⏱️ 15 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Tells Google your website exists and helps index it faster.</p>
+                        <p><strong>Steps:</strong></p>
+                        <ol>
+                            <li>Go to <a href="https://search.google.com/search-console" target="_blank">Google Search Console</a></li>
+                            <li>Click "Add Property" → Enter: <code>https://back40-rv.com</code></li>
+                            <li>Verify ownership (HTML file upload or meta tag method)</li>
+                            <li>Submit sitemap: <code>https://back40-rv.com/sitemap.xml</code></li>
+                            <li>Use "URL Inspection" tool → Request indexing for homepage</li>
+                        </ol>
+                        <div class="button-group">
+                            <a href="https://search.google.com/search-console" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Open Google Search Console
+                            </a>
+                            <button class="btn btn-secondary" onclick="copyToClipboard('https://back40-rv.com/sitemap.xml')">
+                                <i class="fas fa-copy"></i> Copy Sitemap URL
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="bing">
+                    <input type="checkbox" id="task-bing">
+                    <label for="task-bing">
+                        <span class="task-title">Submit site to Bing Webmaster Tools</span>
+                        <span class="task-meta">⏱️ 10 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Gets you on Bing AND Yahoo Search (Yahoo uses Bing). Easy one-click import from Google!</p>
+                        <p><strong>Steps:</strong></p>
+                        <ol>
+                            <li>Go to <a href="https://www.bing.com/webmasters" target="_blank">Bing Webmaster Tools</a></li>
+                            <li>Sign in with Microsoft, Google, or Facebook account</li>
+                            <li><strong>Option A (Easy):</strong> Import from Google Search Console (one-click!)</li>
+                            <li><strong>Option B:</strong> Add site manually: <code>https://back40-rv.com</code></li>
+                            <li>Submit sitemap: <code>https://back40-rv.com/sitemap.xml</code></li>
+                        </ol>
+                        <div class="button-group">
+                            <a href="https://www.bing.com/webmasters" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Open Bing Webmaster Tools
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="gbp">
+                    <input type="checkbox" id="task-gbp">
+                    <label for="task-gbp">
+                        <span class="task-title">Create Google Business Profile (GBP)</span>
+                        <span class="task-meta">⏱️ 30 minutes + 5-7 days verification</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> #1 most important for local SEO! Appears in Google Maps and local searches.</p>
+                        <p><strong>Steps:</strong></p>
+                        <ol>
+                            <li>Go to <a href="https://business.google.com" target="_blank">Google Business Profile</a></li>
+                            <li>Click "Manage now" → Search for "Back40 RV Park" (may already exist)</li>
+                            <li>Claim or create listing with this info:</li>
+                        </ol>
+                        <div class="info-box">
+                            <strong>Business Name:</strong> Back40 RV Park<br>
+                            <strong>Category:</strong> RV Park (primary), Campground (secondary)<br>
+                            <strong>Address:</strong> 1373 Hickory Lane, Pineville, MO 64856<br>
+                            <strong>Phone:</strong> 479-721-5630<br>
+                            <strong>Website:</strong> https://back40-rv.com<br>
+                            <strong>Hours:</strong> By Appointment (7 days/week)
+                        </div>
+                        <ol start="4">
+                            <li>Add description (see Templates tab)</li>
+                            <li>Upload 10-30 photos of RV sites, trails, amenities</li>
+                            <li>Verify by postcard (takes 5-7 days to receive)</li>
+                        </ol>
+                        <div class="button-group">
+                            <a href="https://business.google.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Open Google Business Profile
+                            </a>
+                            <a href="#templates" class="btn btn-secondary" onclick="switchSection('templates')">
+                                <i class="fas fa-file-alt"></i> View Business Description Template
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="bing-places">
+                    <input type="checkbox" id="task-bing-places">
+                    <label for="task-bing-places">
+                        <span class="task-title">Create Bing Places for Business listing</span>
+                        <span class="task-meta">⏱️ 15 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Shows up in Bing Maps searches (different from Webmaster Tools).</p>
+                        <p><strong>Steps:</strong></p>
+                        <ol>
+                            <li>Go to <a href="https://www.bingplaces.com" target="_blank">Bing Places for Business</a></li>
+                            <li>Sign in and add your business</li>
+                            <li>Use same info as Google Business Profile (see Templates tab)</li>
+                            <li>Can import from Google My Business if available</li>
+                        </ol>
+                        <div class="button-group">
+                            <a href="https://www.bingplaces.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Open Bing Places
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Month 1 Tasks -->
+            <div class="checklist-group">
+                <div class="group-header">
+                    <h3><i class="fas fa-calendar-alt"></i> Month 1: Build Your Presence</h3>
+                    <span class="priority-badge medium">Medium Priority</span>
+                </div>
+
+                <div class="checklist-item" data-task="yelp">
+                    <input type="checkbox" id="task-yelp">
+                    <label for="task-yelp">
+                        <span class="task-title">Claim Yelp listing</span>
+                        <span class="task-meta">⏱️ 15 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Major review platform, especially for travelers and RVers.</p>
+                        <div class="button-group">
+                            <a href="https://www.yelp.com/biz/create" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Claim on Yelp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="facebook">
+                    <input type="checkbox" id="task-facebook">
+                    <label for="task-facebook">
+                        <span class="task-title">Create Facebook Business Page</span>
+                        <span class="task-meta">⏱️ 20 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Social presence + shows in Facebook searches and maps.</p>
+                        <div class="button-group">
+                            <a href="https://www.facebook.com/pages/create" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Create Facebook Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="tripadvisor">
+                    <input type="checkbox" id="task-tripadvisor">
+                    <label for="task-tripadvisor">
+                        <span class="task-title">Claim TripAdvisor listing</span>
+                        <span class="task-meta">⏱️ 15 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Critical for RV parks and campgrounds. Travelers trust TripAdvisor reviews.</p>
+                        <div class="button-group">
+                            <a href="https://www.tripadvisor.com/Owners" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Claim on TripAdvisor
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="apple-maps">
+                    <input type="checkbox" id="task-apple-maps">
+                    <label for="task-apple-maps">
+                        <span class="task-title">Add listing to Apple Maps</span>
+                        <span class="task-meta">⏱️ 10 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> iPhone users find businesses through Apple Maps.</p>
+                        <div class="button-group">
+                            <a href="https://mapsconnect.apple.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Open Apple Maps Connect
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="campendium">
+                    <input type="checkbox" id="task-campendium">
+                    <label for="task-campendium">
+                        <span class="task-title">List on Campendium</span>
+                        <span class="task-meta">⏱️ 15 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> #1 RV-specific directory. RVers search here specifically!</p>
+                        <div class="button-group">
+                            <a href="https://www.campendium.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Open Campendium
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="rvparkreviews">
+                    <input type="checkbox" id="task-rvparkreviews">
+                    <label for="task-rvparkreviews">
+                        <span class="task-title">List on RV Park Reviews</span>
+                        <span class="task-meta">⏱️ 15 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Popular RV-specific review site.</p>
+                        <div class="button-group">
+                            <a href="https://www.rvparkreviews.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Open RV Park Reviews
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="reviews-ask">
+                    <input type="checkbox" id="task-reviews-ask">
+                    <label for="task-reviews-ask">
+                        <span class="task-title">Ask 10 past guests for Google reviews</span>
+                        <span class="task-meta">⏱️ 1 hour</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Reviews are a TOP 3 ranking factor for local SEO. 10+ reviews = huge boost!</p>
+                        <p><strong>How:</strong></p>
+                        <ol>
+                            <li>Email or text past guests with your Google review link</li>
+                            <li>Be personal: "Hi [Name], thanks for staying with us! Would you mind leaving a review?"</li>
+                            <li>Make it easy: Include direct link to review page</li>
+                            <li>Create QR code to print and post on-site for future guests</li>
+                        </ol>
+                        <div class="alert alert-success">
+                            <strong>Tip:</strong> After Google Business Profile is verified, find your review link in the GBP dashboard under "Get more reviews"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ongoing Tasks -->
+            <div class="checklist-group">
+                <div class="group-header">
+                    <h3><i class="fas fa-sync"></i> Ongoing: Monthly Maintenance</h3>
+                    <span class="priority-badge low">Ongoing</span>
+                </div>
+
+                <div class="checklist-item" data-task="gsc-check">
+                    <input type="checkbox" id="task-gsc-check">
+                    <label for="task-gsc-check">
+                        <span class="task-title">Check Google Search Console for errors</span>
+                        <span class="task-meta">⏱️ 10 minutes/month</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item" data-task="gbp-post">
+                    <input type="checkbox" id="task-gbp-post">
+                    <label for="task-gbp-post">
+                        <span class="task-title">Post weekly Google Business Profile update</span>
+                        <span class="task-meta">⏱️ 5 minutes/week</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Ideas for posts:</strong> Trail conditions, availability updates, seasonal photos, local events</p>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="reviews-respond">
+                    <input type="checkbox" id="task-reviews-respond">
+                    <label for="task-reviews-respond">
+                        <span class="task-title">Respond to all reviews within 48 hours</span>
+                        <span class="task-meta">⏱️ As needed</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Shows you care + boosts SEO when you include keywords in responses</p>
+                        <p><strong>Example:</strong> "Thanks for staying at our Bella Vista RV park with trail access! Hope to see you again soon."</p>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="photos-add">
+                    <input type="checkbox" id="task-photos-add">
+                    <label for="task-photos-add">
+                        <span class="task-title">Add new photos monthly to GBP</span>
+                        <span class="task-meta">⏱️ 10 minutes/month</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Ideas:</strong> Seasonal changes, new guests enjoying trails, campfire scenes, sunset views</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional/Advanced -->
+            <div class="checklist-group">
+                <div class="group-header">
+                    <h3><i class="fas fa-star"></i> Optional: Advanced SEO</h3>
+                    <span class="priority-badge low">Low Priority</span>
+                </div>
+
+                <div class="checklist-item" data-task="moz-local">
+                    <input type="checkbox" id="task-moz-local">
+                    <label for="task-moz-local">
+                        <span class="task-title">Sign up for Moz Local ($14/month)</span>
+                        <span class="task-meta">⏱️ 20 minutes setup</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Automates listing submissions to 45+ directories</p>
+                        <div class="button-group">
+                            <a href="https://moz.com/products/local" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> View Moz Local
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="goodsam">
+                    <input type="checkbox" id="task-goodsam">
+                    <label for="task-goodsam">
+                        <span class="task-title">List on Good Sam Club (~$300/year)</span>
+                        <span class="task-meta">⏱️ 30 minutes</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Why:</strong> Premium RV directory, highly trusted by RVers. Paid but worthwhile.</p>
+                        <div class="button-group">
+                            <a href="https://www.goodsam.com" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Open Good Sam
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item" data-task="backlinks">
+                    <input type="checkbox" id="task-backlinks">
+                    <label for="task-backlinks">
+                        <span class="task-title">Get 5 local backlinks (bike shops, tourism sites)</span>
+                        <span class="task-meta">⏱️ 2-3 hours</span>
+                    </label>
+                    <div class="task-details">
+                        <p><strong>Ideas:</strong></p>
+                        <ul>
+                            <li>Bella Vista Chamber of Commerce</li>
+                            <li>Visit Bentonville tourism site</li>
+                            <li>Local bike shops (offer discount to their customers)</li>
+                            <li>OZ Trails website</li>
+                            <li>Northwest Arkansas Trail System</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directories Section -->
+        <section id="directories-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-building"></i> Directory Submission Guide</h2>
+                <p>All important directories organized by priority with direct links.</p>
+            </div>
+
+            <div class="directory-category">
+                <h3><i class="fas fa-star"></i> Critical (Do First)</h3>
+                <div class="directory-grid">
+                    <div class="directory-card">
+                        <div class="directory-icon google">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h4>Google Business Profile</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐⭐</p>
+                        <p>Most important for local SEO. Shows in Maps and local search results.</p>
+                        <a href="https://business.google.com" target="_blank" class="btn btn-small btn-primary">Add Listing</a>
+                    </div>
+
+                    <div class="directory-card">
+                        <div class="directory-icon bing">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h4>Bing Places</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐</p>
+                        <p>Bing and Yahoo searches. Easy import from Google.</p>
+                        <a href="https://www.bingplaces.com" target="_blank" class="btn btn-small btn-primary">Add Listing</a>
+                    </div>
+
+                    <div class="directory-card">
+                        <div class="directory-icon yelp">
+                            <i class="fab fa-yelp"></i>
+                        </div>
+                        <h4>Yelp for Business</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐</p>
+                        <p>Major review platform for travelers and locals.</p>
+                        <a href="https://www.yelp.com/biz/create" target="_blank" class="btn btn-small btn-primary">Claim Listing</a>
+                    </div>
+
+                    <div class="directory-card">
+                        <div class="directory-icon tripadvisor">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4>TripAdvisor</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐⭐</p>
+                        <p>Critical for RV parks and campgrounds. Travelers trust TA reviews.</p>
+                        <a href="https://www.tripadvisor.com/Owners" target="_blank" class="btn btn-small btn-primary">Claim Listing</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="directory-category">
+                <h3><i class="fas fa-map-marker-alt"></i> Important Maps & Search</h3>
+                <div class="directory-grid">
+                    <div class="directory-card">
+                        <div class="directory-icon apple">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h4>Apple Maps</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐</p>
+                        <p>iPhone users search here. Easy to add.</p>
+                        <a href="https://mapsconnect.apple.com" target="_blank" class="btn btn-small btn-primary">Add Listing</a>
+                    </div>
+
+                    <div class="directory-card">
+                        <div class="directory-icon facebook">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <h4>Facebook</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐</p>
+                        <p>Social presence + shows in Facebook searches.</p>
+                        <a href="https://www.facebook.com/pages/create" target="_blank" class="btn btn-small btn-primary">Create Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="directory-category">
+                <h3><i class="fas fa-caravan"></i> RV-Specific Directories</h3>
+                <div class="directory-grid">
+                    <div class="directory-card">
+                        <div class="directory-icon rv">
+                            <i class="fas fa-campground"></i>
+                        </div>
+                        <h4>Campendium</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐⭐</p>
+                        <p>#1 RV directory. RVers search here specifically!</p>
+                        <a href="https://www.campendium.com" target="_blank" class="btn btn-small btn-primary">Add Listing</a>
+                    </div>
+
+                    <div class="directory-card">
+                        <div class="directory-icon rv">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>RV Park Reviews</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐</p>
+                        <p>Popular RV-specific review site.</p>
+                        <a href="https://www.rvparkreviews.com" target="_blank" class="btn btn-small btn-primary">Add Listing</a>
+                    </div>
+
+                    <div class="directory-card">
+                        <div class="directory-icon rv">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h4>Good Sam Club</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐⭐</p>
+                        <p>Premium RV directory (~$300/year). Highly trusted.</p>
+                        <a href="https://www.goodsam.com" target="_blank" class="btn btn-small btn-primary">View Pricing</a>
+                    </div>
+
+                    <div class="directory-card">
+                        <div class="directory-icon rv">
+                            <i class="fas fa-map-signs"></i>
+                        </div>
+                        <h4>RVillage</h4>
+                        <p class="directory-impact">Impact: ⭐⭐⭐</p>
+                        <p>RV social network with campground listings.</p>
+                        <a href="https://www.rvillage.com" target="_blank" class="btn btn-small btn-primary">Add Listing</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="directory-category">
+                <h3><i class="fas fa-list"></i> Additional Directories (Optional)</h3>
+                <div class="directory-list">
+                    <div class="directory-item">
+                        <span class="directory-name">FreeRoam</span>
+                        <a href="https://www.freeroam.app" target="_blank" class="btn btn-link">Visit →</a>
+                    </div>
+                    <div class="directory-item">
+                        <span class="directory-name">AllStays</span>
+                        <a href="https://www.allstays.com" target="_blank" class="btn btn-link">Visit →</a>
+                    </div>
+                    <div class="directory-item">
+                        <span class="directory-name">RV Life</span>
+                        <a href="https://www.rvlife.com" target="_blank" class="btn btn-link">Visit →</a>
+                    </div>
+                    <div class="directory-item">
+                        <span class="directory-name">The Dyrt</span>
+                        <a href="https://thedyrt.com" target="_blank" class="btn btn-link">Visit →</a>
+                    </div>
+                    <div class="directory-item">
+                        <span class="directory-name">Hipcamp</span>
+                        <a href="https://www.hipcamp.com" target="_blank" class="btn btn-link">Visit →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Templates Section (continuing in next message due to length) -->
+        <section id="templates-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-file-alt"></i> Copy-Paste Templates</h2>
+                <p>Pre-filled business information ready to copy and paste into directories.</p>
+            </div>
+
+            <div class="template-card">
+                <h3><i class="fas fa-info-circle"></i> Basic Business Info (NAP)</h3>
+                <p>Use this EXACT format everywhere for consistency:</p>
+                <div class="template-content">
+                    <pre><code>Business Name: Back40 RV Park
+Address: 1373 Hickory Lane, Pineville, MO 64856
+Phone: (479) 721-5630
+Website: https://back40-rv.com
+Email: back40rvpark@gmail.com</code></pre>
+                </div>
+                <button class="btn btn-secondary" onclick="copyTemplate('nap')">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+
+            <div class="template-card">
+                <h3><i class="fas fa-align-left"></i> Short Description (150 characters)</h3>
+                <p>For directories with character limits:</p>
+                <div class="template-content">
+                    <pre><code>Quiet RV park in Bella Vista, AR with direct access to 100+ miles of mountain bike and hiking trails. Full hookups. $50/night.</code></pre>
+                </div>
+                <button class="btn btn-secondary" onclick="copyTemplate('short-desc')">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+
+            <div class="template-card">
+                <h3><i class="fas fa-file-text"></i> Full Business Description (750 characters)</h3>
+                <p>For Google Business Profile, Facebook, Yelp:</p>
+                <div class="template-content">
+                    <pre><code>Back40 RV Park is a quiet, cozy RV park in the heart of the Ozarks with full hookups (50/30/20 amp), dump station access, and direct access to hundreds of miles of hiking and cycling trails in Bella Vista, Arkansas and Pineville, Missouri.
+
+Located just steps from the famous Back 40 Trail System (40+ miles of flowing XC singletrack), our RV park offers unmatched trail access for mountain biking and hiking enthusiasts. No trailer needed—walk or ride directly from your site onto world-class trails.
+
+We're a self-contained RV park designed for peace and privacy. Each site includes electrical hookups, with our dump station 30-100 feet away and water fill within 50 feet of all sites.
+
+Rates: $50/night, $300/week. By appointment. Call 479-721-5630 to book.</code></pre>
+                </div>
+                <button class="btn btn-secondary" onclick="copyTemplate('full-desc')">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+
+            <div class="template-card">
+                <h3><i class="fas fa-tags"></i> Business Categories</h3>
+                <p>Use these categories when listing:</p>
+                <div class="template-content">
+                    <pre><code>Primary Category: RV Park
+Secondary Categories: Campground, Lodging, Mountain Bike Trail, Hiking Area
+Keywords: RV park, campground, trail access, mountain biking, Bella Vista, Bentonville, Ozarks</code></pre>
+                </div>
+                <button class="btn btn-secondary" onclick="copyTemplate('categories')">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+
+            <div class="template-card">
+                <h3><i class="fas fa-list-ul"></i> Amenities List</h3>
+                <p>Copy-paste amenities for listings:</p>
+                <div class="template-content">
+                    <pre><code>✓ 50 amp electrical hookup
+✓ 30 amp electrical hookup
+✓ 20 amp electrical hookup
+✓ RV dump station (30-100 ft from sites)
+✓ Fresh water fill station (within 50 ft)
+✓ Direct trail access
+✓ Mountain bike trails
+✓ Hiking trails
+✓ Gravel riding routes
+✓ Pet friendly
+✓ Quiet, wooded setting
+✓ Level gravel pads</code></pre>
+                </div>
+                <button class="btn btn-secondary" onclick="copyTemplate('amenities')">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+
+            <div class="template-card">
+                <h3><i class="fas fa-dollar-sign"></i> Pricing Info</h3>
+                <div class="template-content">
+                    <pre><code>Nightly Rate: $50/night
+Weekly Rate: $300/week (Save $50!)
+Check-in: After 1:00 PM
+Check-out: By 11:00 AM
+Flexible arrival times available by appointment</code></pre>
+                </div>
+                <button class="btn btn-secondary" onclick="copyTemplate('pricing')">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+
+            <div class="template-card">
+                <h3><i class="fas fa-map-marker-alt"></i> Geographic Info</h3>
+                <p>For maps and location-based fields:</p>
+                <div class="template-content">
+                    <pre><code>Latitude: 36.5951
+Longitude: -94.3849
+State: Missouri (MO)
+City: Pineville
+Nearby Cities: Bella Vista AR (12 mi), Bentonville AR (22 mi), Pea Ridge AR (10 mi)
+Region: Northwest Arkansas / Southwest Missouri / Ozarks</code></pre>
+                </div>
+                <button class="btn btn-secondary" onclick="copyTemplate('geo')">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+
+            <div class="template-card">
+                <h3><i class="fas fa-envelope"></i> Review Request Email Template</h3>
+                <p>Send to past guests:</p>
+                <div class="template-content">
+                    <pre><code>Subject: Thanks for staying at Back40 RV Park!
+
+Hi [Guest Name],
+
+Thanks so much for staying with us at Back40 RV Park! We hope you enjoyed the trails and had a great time in the Ozarks.
+
+Would you mind taking a minute to leave us a review on Google? Your feedback helps other RVers find us and supports our small business.
+
+[INSERT YOUR GOOGLE REVIEW LINK HERE AFTER GBP IS SET UP]
+
+Thanks again, and we'd love to see you back anytime!
+
+Mark
+Back40 RV Park
+479-721-5630</code></pre>
+                </div>
+                <button class="btn btn-secondary" onclick="copyTemplate('review-email')">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+        </section>
+
+        <!-- Guides Section -->
+        <section id="guides-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-book"></i> Step-by-Step Guides</h2>
+                <p>Detailed instructions for key SEO tasks.</p>
+            </div>
+
+            <div class="guide-card">
+                <h3><i class="fab fa-google"></i> Complete Google Search Console Setup</h3>
+                <div class="guide-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h4>Go to Google Search Console</h4>
+                            <p>Visit <a href="https://search.google.com/search-console" target="_blank">search.google.com/search-console</a> and sign in with your Google account.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h4>Add Your Property</h4>
+                            <p>Click "Add Property" → Choose "URL prefix" → Enter: <code>https://back40-rv.com</code></p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h4>Verify Ownership (HTML File Method)</h4>
+                            <p>Google will provide an HTML file to download. You'll need to upload this to your website root folder. Contact Brett if you need help with this step.</p>
+                            <p class="alert alert-info">Alternative: Use the "HTML tag" method - copy the meta tag and Brett can add it to your homepage head section.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <h4>Submit Your Sitemap</h4>
+                            <p>After verification, go to "Sitemaps" in the left menu → Add sitemap: <code>https://back40-rv.com/sitemap.xml</code> → Click Submit</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <h4>Request Indexing for Key Pages</h4>
+                            <p>Use URL Inspection tool → Enter URL → Click "Request Indexing"</p>
+                            <p><strong>Priority pages to index:</strong></p>
+                            <ul>
+                                <li>https://back40-rv.com/ (homepage)</li>
+                                <li>https://back40-rv.com/rv-sites.html</li>
+                                <li>https://back40-rv.com/trails.html</li>
+                                <li>https://back40-rv.com/contact.html</li>
+                            </ul>
+                            <p class="note">Limit: 10 URLs per day</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-card">
+                <h3><i class="fas fa-map-marked-alt"></i> Setting Up Google Business Profile</h3>
+                <div class="guide-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h4>Create or Claim Your Listing</h4>
+                            <p>Go to <a href="https://business.google.com" target="_blank">business.google.com</a> → Click "Manage now"</p>
+                            <p>Search for "Back40 RV Park" - if it exists, claim it. If not, create new listing.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h4>Enter Business Information</h4>
+                            <p>Use the exact info from the Templates tab:</p>
+                            <ul>
+                                <li><strong>Business Name:</strong> Back40 RV Park</li>
+                                <li><strong>Category:</strong> RV Park</li>
+                                <li><strong>Location:</strong> 1373 Hickory Lane, Pineville, MO 64856</li>
+                                <li><strong>Service Area:</strong> Add Bella Vista AR, Bentonville AR, Pea Ridge AR</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h4>Add Contact Details</h4>
+                            <ul>
+                                <li><strong>Phone:</strong> 479-721-5630</li>
+                                <li><strong>Website:</strong> https://back40-rv.com</li>
+                                <li><strong>Hours:</strong> By Appointment - Open 7 days</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <h4>Write Your Description</h4>
+                            <p>Use the "Full Business Description" from the Templates tab. Paste it exactly.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <h4>Upload Photos (Critical!)</h4>
+                            <p>Google prioritizes listings with lots of photos. Upload at least 10 photos:</p>
+                            <ul>
+                                <li>Exterior: RV sites, park entrance, signage</li>
+                                <li>Amenities: Electrical hookups, dump station, water fill</li>
+                                <li>Trail access: Trail entrances, trail signage, maps</li>
+                                <li>Scenic: Sunset, campfire, nature shots</li>
+                                <li>Action: RVs parked, people biking/hiking</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">6</span>
+                        <div class="step-content">
+                            <h4>Verify by Postcard</h4>
+                            <p>Google will mail a postcard with verification code to: 1373 Hickory Lane, Pineville, MO 64856</p>
+                            <p class="alert alert-warning">This takes 5-7 business days. Once you get the postcard, enter the code in your Google Business Profile dashboard to complete verification.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">7</span>
+                        <div class="step-content">
+                            <h4>After Verification: Get Review Link</h4>
+                            <p>In your GBP dashboard, go to "Get more reviews" to find your direct review link. Save this link and share it with guests!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-card">
+                <h3><i class="fas fa-star"></i> Getting Your First 10 Reviews</h3>
+                <div class="guide-content">
+                    <p><strong>Why 10 reviews?</strong> Studies show businesses with 10+ reviews get significantly more clicks and bookings.</p>
+
+                    <h4>Step 1: Identify Past Guests</h4>
+                    <p>Make a list of 15-20 past guests who had positive experiences. You want more than 10 in case some don't respond.</p>
+
+                    <h4>Step 2: Personalize Your Request</h4>
+                    <p>Don't send generic messages. Personal touches work better:</p>
+                    <div class="example-box">
+                        <p>"Hi John! Hope you and Sarah are doing well. We loved having you stay with us last month and were so glad you enjoyed the Back 40 trails. Would you mind leaving us a quick Google review? It really helps us out. Here's the link: [YOUR LINK]"</p>
+                    </div>
+
+                    <h4>Step 3: Make It Easy</h4>
+                    <ul>
+                        <li>Include the direct review link (don't make them search)</li>
+                        <li>Send via their preferred method (text or email)</li>
+                        <li>Timing: Ask within 1-2 weeks of their stay while it's fresh</li>
+                    </ul>
+
+                    <h4>Step 4: Follow Up (Politely)</h4>
+                    <p>If someone doesn't respond after a week, one gentle follow-up is okay: "Hey, just wanted to bump this up in case you missed it!"</p>
+
+                    <h4>Step 5: Respond to Every Review</h4>
+                    <p>Thank reviewers and include keywords in your response:</p>
+                    <div class="example-box">
+                        <p>"Thanks so much for staying at our Bella Vista RV park with trail access! We're glad you enjoyed the Back 40 trails and hope to see you again soon."</p>
+                    </div>
+
+                    <h4>Step 6: Create On-Site System</h4>
+                    <ul>
+                        <li>Print a QR code linking to your review page</li>
+                        <li>Post it near checkout area or on your signage</li>
+                        <li>Mention it at check-in: "If you enjoy your stay, we'd love a review!"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Site Settings Section -->
+        <section id="settings-section" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-cog"></i> Site Settings & Updates</h2>
+                <p>Manage social media links, analytics, and other site settings.</p>
+            </div>
+
+            <!-- Social Media Manager -->
+            <div class="settings-card">
+                <div class="settings-card-header">
+                    <h3><i class="fas fa-share-alt"></i> Social Media Links</h3>
+                    <p>Add your social media profiles - they'll automatically appear in the website footer.</p>
+                </div>
+
+                <form id="socialMediaForm" class="settings-form">
+                    <div class="form-group">
+                        <label for="facebook">
+                            <i class="fab fa-facebook" style="color: #1877f2;"></i> Facebook
+                        </label>
+                        <input type="text" id="facebook" name="facebook" placeholder="https://facebook.com/back40rv or just: back40rv">
+                        <small>Enter full URL or just your page name</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instagram">
+                            <i class="fab fa-instagram" style="color: #e4405f;"></i> Instagram
+                        </label>
+                        <input type="text" id="instagram" name="instagram" placeholder="@back40rv or https://instagram.com/back40rv">
+                        <small>Enter username (with or without @) or full URL</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="youtube">
+                            <i class="fab fa-youtube" style="color: #ff0000;"></i> YouTube
+                        </label>
+                        <input type="text" id="youtube" name="youtube" placeholder="@back40rv or https://youtube.com/@back40rv">
+                        <small>Enter channel name or full URL</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="twitter">
+                            <i class="fab fa-x-twitter"></i> Twitter / X
+                        </label>
+                        <input type="text" id="twitter" name="twitter" placeholder="@back40rv or https://twitter.com/back40rv">
+                        <small>Enter username (with or without @) or full URL</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tiktok">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </label>
+                        <input type="text" id="tiktok" name="tiktok" placeholder="@back40rv or https://tiktok.com/@back40rv">
+                        <small>Enter username (with or without @) or full URL</small>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Save Social Links
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="clearSocialBtn">
+                            <i class="fas fa-times"></i> Clear All
+                        </button>
+                    </div>
+
+                    <div class="alert alert-success" id="socialSaveSuccess" style="display: none; margin-top: 15px;">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Social Links Saved!</h4>
+                            <p>Your social media links will now appear in the website footer. <a href="../index.html" target="_blank">View your site</a> to see them.</p>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="settings-preview">
+                    <h4>Live Preview</h4>
+                    <p>This is how your social links will appear in the footer:</p>
+                    <div id="socialPreview" class="social-preview">
+                        <div class="social-links">
+                            <span class="preview-placeholder">Add social links above to see preview</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div class="settings-card">
+                <div class="settings-card-header">
+                    <h3><i class="fas fa-chart-line"></i> Analytics & Tracking</h3>
+                    <p>Track your website visitors and performance.</p>
+                </div>
+
+                <div class="analytics-info">
+                    <h4>Recommended: Google Analytics</h4>
+                    <p><strong>Why?</strong> See how many people visit your site, where they come from, and what pages they view.</p>
+
+                    <div class="info-box">
+                        <h5>How to Set Up Google Analytics (Free)</h5>
+                        <ol>
+                            <li>Go to <a href="https://analytics.google.com" target="_blank">analytics.google.com</a></li>
+                            <li>Create a free account</li>
+                            <li>Add your website: <code>https://back40-rv.com</code></li>
+                            <li>Get your tracking code (starts with "G-")</li>
+                            <li>Contact Brett to add the code to your website</li>
+                        </ol>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <h4>Need Help?</h4>
+                            <p>Setting up Google Analytics requires adding code to your website. Contact Brett to set this up - it takes about 5 minutes.</p>
+                        </div>
+                    </div>
+
+                    <a href="https://analytics.google.com" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Go to Google Analytics
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Updates -->
+            <div class="settings-card">
+                <div class="settings-card-header">
+                    <h3><i class="fas fa-bolt"></i> Quick Site Updates</h3>
+                    <p>Common updates you might want to make to your website.</p>
+                </div>
+
+                <div class="quick-updates">
+                    <div class="update-item">
+                        <div class="update-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="update-content">
+                            <h4>Update Pricing</h4>
+                            <p>Current: $50/night, $300/week</p>
+                            <p class="update-note">Contact Brett to update pricing on the site</p>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="update-content">
+                            <h4>Update Phone Number</h4>
+                            <p>Current: (479) 721-5630</p>
+                            <p class="update-note">Contact Brett to change phone number</p>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="update-content">
+                            <h4>Update Photos</h4>
+                            <p>Add new photos to your website and Google Business Profile</p>
+                            <p class="update-note">Contact Brett to add new photos to the site</p>
+                        </div>
+                    </div>
+
+                    <div class="update-item">
+                        <div class="update-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="update-content">
+                            <h4>Update Hours/Availability</h4>
+                            <p>Current: By Appointment, 7 Days/Week</p>
+                            <p class="update-note">Contact Brett to update hours or seasonal closures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <p><strong>Future Enhancement:</strong> These updates will be self-service in a future version. For now, contact Brett for any changes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Site Health -->
+            <div class="settings-card">
+                <div class="settings-card-header">
+                    <h3><i class="fas fa-heartbeat"></i> Site Health Check</h3>
+                    <p>Quick links to check your website's status and performance.</p>
+                </div>
+
+                <div class="health-checks">
+                    <a href="https://search.google.com/test/mobile-friendly?url=https://back40-rv.com" target="_blank" class="health-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile-Friendly Test</span>
+                    </a>
+
+                    <a href="https://pagespeed.web.dev/analysis?url=https://back40-rv.com" target="_blank" class="health-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Page Speed Test</span>
+                    </a>
+
+                    <a href="https://validator.schema.org/#url=https://back40-rv.com" target="_blank" class="health-card">
+                        <i class="fas fa-code"></i>
+                        <span>Schema Validator</span>
+                    </a>
+
+                    <a href="https://www.back40-rv.com/sitemap.xml" target="_blank" class="health-card">
+                        <i class="fas fa-sitemap"></i>
+                        <span>View Sitemap</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

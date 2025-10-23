@@ -1119,3 +1119,140 @@ section {
         font-size: 3.5rem;
     }
 }
+
+/* === Social Media Links === */
+.footer-social {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    color: white;
+}
+
+.social-link i {
+    line-height: 1;
+}
+
+/* Platform-specific colors on hover */
+.social-link:hover .fa-facebook {
+    color: #1877f2;
+}
+
+.social-link:hover .fa-instagram {
+    color: #e4405f;
+}
+
+.social-link:hover .fa-youtube {
+    color: #ff0000;
+}
+
+.social-link:hover .fa-x-twitter {
+    color: #1da1f2;
+}
+
+.social-link:hover .fa-tiktok {
+    color: #000000;
+}
+
+/* Admin Link in Footer */
+.footer-bottom .admin-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.footer-bottom .admin-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+}
+
+/* Footer Bottom - Updated Layout */
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright {
+    flex: 1;
+}
+
+.footer-admin {
+    flex-shrink: 0;
+}
+
+/* Admin Login Button - Prominent Styling */
+.admin-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.admin-link-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.admin-link-btn i {
+    font-size: 14px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-copyright {
+        order: 2;
+    }
+
+    .footer-admin {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .admin-link-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

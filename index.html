@@ -7,6 +7,22 @@
     <title>Back40 RV Park | Quiet RV Camping with Trail Access | Bella Vista AR</title>
     <link rel="canonical" href="https://back40-rv.com/index.html">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://back40-rv.com/">
+    <meta property="og:title" content="Back40 RV Park | Quiet RV Camping with Trail Access | Bella Vista AR">
+    <meta property="og:description" content="Quiet RV park in Bella Vista, AR with direct access to 100+ miles of mountain bike and hiking trails. Full hookups (50/30/20 amp). $50/night.">
+    <meta property="og:image" content="https://back40-rv.com/images/campground-sunset.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Back40 RV Park">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://back40-rv.com/">
+    <meta name="twitter:title" content="Back40 RV Park | Quiet RV Camping with Trail Access">
+    <meta name="twitter:description" content="Quiet RV park in Bella Vista, AR with direct access to 100+ miles of mountain bike and hiking trails. $50/night.">
+    <meta name="twitter:image" content="https://back40-rv.com/images/campground-sunset.jpg">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +70,13 @@
         "description": "By appointment"
       },
       "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "12",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "amenityFeature": [
         {"@type": "LocationFeatureSpecification", "name": "50 Amp Electric Hookup", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "30 Amp Electric Hookup", "value": true},
@@ -91,7 +114,9 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>back40<span>-rv</span></h1>
+                    <a href="index.html" aria-label="Back40 RV Park Home">
+                        <div class="logo-text">back40<span>-rv</span></div>
+                    </a>
                 </div>
                 <nav class="nav" id="nav">
                     <button class="nav-close" id="nav-close">
@@ -449,6 +474,10 @@
                         <p><i class="fas fa-phone"></i> <a href="tel:4797215630">479-721-5630</a></p>
                         <p><i class="fas fa-map-marker-alt"></i> 1373 Hickory Lane, Pineville, MO 64856</p>
                     </div>
+                    <!-- Social Media Links -->
+                    <div class="footer-social" id="footerSocial">
+                        <!-- Social links will be inserted here by JavaScript if configured -->
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
@@ -478,8 +507,17 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Back40 RV Park. All rights reserved.</p>
-                <p>Designed by Brett for Mark Swart</p>
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 Back40 RV Park. All rights reserved.</p>
+                        <p>Designed by Brett for Mark Swart</p>
+                    </div>
+                    <div class="footer-admin">
+                        <a href="admin/" class="admin-link-btn">
+                            <i class="fas fa-lock"></i> Admin Login
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -491,5 +529,6 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/social-links.js"></script>
 </body>
 </html>
