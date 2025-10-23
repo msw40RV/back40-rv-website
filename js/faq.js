@@ -20,7 +20,7 @@ function initFAQAccordion() {
         // Set initial state
         answer.style.maxHeight = '0';
         answer.style.overflow = 'hidden';
-        answer.style.transition = 'max-height 0.3s ease, padding 0.3s ease';
+        answer.style.transition = 'max-height 0.5s ease, padding 0.3s ease';
 
         question.addEventListener('click', function() {
             const isOpen = item.classList.contains('active');
@@ -46,10 +46,9 @@ function initFAQAccordion() {
                 item.classList.add('active');
                 answer.style.paddingTop = '1rem';
                 answer.style.paddingBottom = '1rem';
-                // Use a large maxHeight or calculate after padding is applied
-                setTimeout(() => {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                }, 10);
+                // Use large max-height to ensure all content shows
+                // 2000px should be more than enough for any FAQ answer
+                answer.style.maxHeight = '2000px';
             }
         });
     });
