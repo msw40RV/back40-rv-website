@@ -13,6 +13,37 @@ document.getElementById('logoutBtn').addEventListener('click', function() {
     }
 });
 
+// Mobile menu toggle
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const sidebar = document.querySelector('.sidebar');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+if (mobileMenuToggle && sidebar && mobileOverlay) {
+    // Toggle menu
+    mobileMenuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        sidebar.classList.toggle('mobile-active');
+        mobileOverlay.classList.toggle('active');
+    });
+
+    // Close sidebar when clicking a nav item on mobile
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('mobile-active');
+                mobileOverlay.classList.remove('active');
+            }
+        });
+    });
+
+    // Close sidebar when clicking overlay
+    mobileOverlay.addEventListener('click', function() {
+        sidebar.classList.remove('mobile-active');
+        mobileOverlay.classList.remove('active');
+    });
+}
+
 // Navigation
 const navItems = document.querySelectorAll('.nav-item');
 const sections = document.querySelectorAll('.content-section');

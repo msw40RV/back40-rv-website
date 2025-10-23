@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="admin-style.css">
 </head>
 <body>
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">
@@ -57,7 +60,12 @@
     <div class="main-content">
         <!-- Header -->
         <header class="dashboard-header">
-            <h1 id="pageTitle">SEO Dashboard Overview</h1>
+            <div class="header-left">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 id="pageTitle">SEO Dashboard Overview</h1>
+            </div>
             <div class="header-actions">
                 <span class="user-info">
                     <i class="fas fa-user-circle"></i> Mark
