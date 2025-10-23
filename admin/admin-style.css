@@ -467,16 +467,23 @@ body {
 
 .checklist-item > label {
     cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0;
 }
 
 .task-title {
     flex: 1;
     color: var(--dark);
-    cursor: pointer;
 }
 
-.checklist-item:hover {
+.checklist-item > label:hover {
     background: #f9fafb;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin: 0 -10px;
 }
 
 .task-meta {

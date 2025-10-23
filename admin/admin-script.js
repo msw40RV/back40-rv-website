@@ -193,20 +193,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load saved progress
     loadProgress();
 
-    // Expand/collapse task details - attach to the entire checklist item
-    const checklistItems = document.querySelectorAll('.checklist-item');
-    checklistItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            // If clicking checkbox or label for checkbox, let it handle check/uncheck only
-            if (e.target.type === 'checkbox' || e.target.tagName === 'LABEL') {
-                return;
-            }
+    // Remove the 'for' attribute from all labels to prevent label-checkbox association
+    // This stops the click-anywhere-on-label-to-check behavior
+    const labels = document.querySelectorAll('.checklist-item > label');
+    labels.forEach(label => {
+        label.removeAttribute('for');
+    });
 
-            // Otherwise, toggle the details
+    // Make checkboxes work by directly handling their clicks
+    const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event from bubbling to item click handler
+        });
+    });
+
+    // Expand/collapse task details - attach to the label (task title area)
+    labels.forEach(label => {
+        label.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const item = this.closest('.checklist-item');
             const details = item.querySelector('.task-details');
-            const checkbox = item.querySelector('input[type="checkbox"]');
 
-            // Show details regardless of completion status
+            // Toggle details
             if (details) {
                 if (details.style.display === 'block') {
                     details.style.display = 'none';
