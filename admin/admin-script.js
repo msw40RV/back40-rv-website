@@ -166,8 +166,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const labels = document.querySelectorAll('.checklist-item > label');
     labels.forEach(label => {
         label.addEventListener('click', function(e) {
-            // Don't expand if clicking checkbox
+            // Don't expand if clicking checkbox - let checkbox handle it
             if (e.target.type === 'checkbox') return;
+
+            // Prevent label from toggling the checkbox when clicking task title
+            e.preventDefault();
 
             const item = this.closest('.checklist-item');
             const details = item.querySelector('.task-details');
