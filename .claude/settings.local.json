@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python compress-images.py:*)"
+      "Bash(python compress-images.py:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
