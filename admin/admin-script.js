@@ -181,18 +181,6 @@ function updateStats() {
 
 // Attach checkbox listeners
 document.addEventListener('DOMContentLoaded', function() {
-    const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
-
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            updateTaskState(this);
-            saveProgress();
-        });
-    });
-
-    // Load saved progress
-    loadProgress();
-
     // Remove the 'for' attribute from all labels to prevent label-checkbox association
     // This stops the click-anywhere-on-label-to-check behavior
     const labels = document.querySelectorAll('.checklist-item > label');
@@ -200,13 +188,23 @@ document.addEventListener('DOMContentLoaded', function() {
         label.removeAttribute('for');
     });
 
-    // Make checkboxes work by directly handling their clicks
+    // Handle checkboxes - both change (for checking) and click (for event propagation)
     const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
+        // Handle state changes
+        checkbox.addEventListener('change', function() {
+            updateTaskState(this);
+            saveProgress();
+        });
+
+        // Prevent event from bubbling to label click handler
         checkbox.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent event from bubbling to item click handler
+            e.stopPropagation();
         });
     });
+
+    // Load saved progress
+    loadProgress();
 
     // Expand/collapse task details - attach to the label (task title area)
     labels.forEach(label => {
