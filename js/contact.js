@@ -25,11 +25,44 @@ function initBookingForm() {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-        // Submit form (using Formspree or your backend)
+        // Submit form via SMS
         const formData = new FormData(form);
 
-        // For demo/testing, show success message
-        // In production, this would submit to your form handler
+        // Format booking info for SMS
+        const name = formData.get('name');
+        const phone = formData.get('phone');
+        const email = formData.get('email');
+        const arrival = formData.get('arrival');
+        const nights = formData.get('nights');
+        const rvLength = formData.get('rvLength');
+        const ampService = formData.get('ampService');
+        const guests = formData.get('guests');
+        const pets = formData.get('pets');
+        const message = formData.get('message');
+
+        // Create SMS message text
+        let smsText = `BOOKING REQUEST from Back40-RV.com\n\n`;
+        smsText += `Name: ${name}\n`;
+        smsText += `Phone: ${phone}\n`;
+        smsText += `Email: ${email}\n`;
+        smsText += `Arrival: ${arrival}\n`;
+        smsText += `Nights: ${nights}\n`;
+        smsText += `RV Length: ${rvLength}ft\n`;
+        smsText += `Amp Service: ${ampService}\n`;
+        smsText += `Guests: ${guests}\n`;
+        smsText += `Pets: ${pets}\n`;
+        if (message) {
+            smsText += `\nMessage: ${message}`;
+        }
+
+        // Encode SMS text for URL
+        const encodedMessage = encodeURIComponent(smsText);
+
+        // Open SMS app with pre-filled message
+        const smsLink = `sms:4797215630&body=${encodedMessage}`;
+        window.location.href = smsLink;
+
+        // Reset form and show success message
         setTimeout(() => {
             showSuccessMessage();
             form.reset();
@@ -40,33 +73,7 @@ function initBookingForm() {
             if (typeof Back40 !== 'undefined') {
                 Back40.trackEvent('Booking', 'Form Submit', 'Reservation Request');
             }
-        }, 1500);
-
-        // Actual submission (uncomment when Formspree ID is added)
-        /*
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                showSuccessMessage();
-                form.reset();
-            } else {
-                showErrorMessage();
-            }
-        })
-        .catch(error => {
-            showErrorMessage();
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-        });
-        */
+        }, 500);
     });
 }
 
@@ -172,8 +179,9 @@ function showSuccessMessage() {
     message.innerHTML = `
         <div style="background: #28a745; color: white; padding: 1.5rem; border-radius: 5px; margin-bottom: 1rem; text-align: center;">
             <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
-            <h3 style="margin-bottom: 0.5rem;">Reservation Request Received!</h3>
-            <p style="margin: 0;">Thank you! We'll confirm your reservation within 24 hours. Check your email for our response.</p>
+            <h3 style="margin-bottom: 0.5rem;">Form Ready to Send!</h3>
+            <p style="margin: 0;">Your messaging app should open with a pre-filled text message. Just hit send to complete your booking request!</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">If your messages app didn't open, <a href="sms:4797215630" style="color: white; text-decoration: underline;">click here</a> or call <a href="tel:4797215630" style="color: white; text-decoration: underline;">479-721-5630</a></p>
         </div>
     `;
 
@@ -183,10 +191,10 @@ function showSuccessMessage() {
     // Scroll to message
     message.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    // Remove message after 10 seconds
+    // Remove message after 15 seconds
     setTimeout(() => {
         message.remove();
-    }, 10000);
+    }, 15000);
 }
 
 // Error Message

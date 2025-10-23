@@ -44,9 +44,12 @@ function initFAQAccordion() {
                 answer.style.paddingBottom = '0';
             } else {
                 item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
                 answer.style.paddingTop = '1rem';
                 answer.style.paddingBottom = '1rem';
+                // Use a large maxHeight or calculate after padding is applied
+                setTimeout(() => {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }, 10);
             }
         });
     });
